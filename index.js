@@ -1,6 +1,9 @@
 // let mi_array = [2,3,4,5,6,7,8];
 // mi_array.map(x => x*x).forEach(x=> console.log(x));
-
+let moment = require("moment");
+let Fechas = require("./fechas");
+let birthday = moment("25/01/1994", "DD/MM/YYYY");
+let fecha = new Fechas(birthday);
 
 let hasta = 10000;
 let obj = {};
@@ -45,5 +48,12 @@ res.promedio = res.total / productos.length;
 res.promedio = (res.promedio).toFixed(2);
 res.total = (res.total).toFixed(2);
 
-console.log("Mi respuesta ", res);
+console.log("Mi getToday ", fecha.getToday());
+console.log("Mi getMyBirth ", fecha.getMyBirth());
+console.log("Mi diffYears ", fecha.diffYears());
+console.log("Mi diffDays ", fecha.diffDays());
+console.log("Mi getDifference months ", fecha.getDifference('months'));
+
+
+
 
